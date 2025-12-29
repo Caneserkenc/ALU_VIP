@@ -85,6 +85,7 @@ ALU_VIP3/
 ## Referanslar
 - [FPGA4Student: Verilog code for ALU](https://www.fpga4student.com/2017/06/Verilog-code-for-ALU.html)
 - [UVM Methodology](https://www.accellera.org/downloads/standards/uvm)
+- [DSİM](https://altair.com/dsim)
 
 ## Lisans
 Bu proje yalnızca eğitim amaçlıdır. ALU tasarımı [FPGA4Student](https://www.fpga4student.com/) kaynağından alınmıştır.
