@@ -61,21 +61,26 @@ ALU_VIP3/
 
 ## How to Run
 1. **Set up the environment:**
-   - Ensure you have a SystemVerilog simulator (e.g., VCS, QuestaSim, or Xcelium) installed.
-   - Add the required simulator binaries to your PATH.
+   - Ensure that the DSim simulator is installed.
+   - Add the required DSim executables to your PATH.
 
 2. **Compile the design and testbench:**
+   - Use the `scripts/run.f` file to compile with DSim:
    ```bash
-   vlog -f scripts/run.f
+   dsim -f scripts/run.f
    ```
 
 3. **Run the simulation:**
+   - After compilation, start the simulation:
    ```bash
-   vsim -c -do "run -all" tb_top
+   dsim tb_top
    ```
 
 4. **View the waveform:**
-   Open the `waves.mxd` file in your waveform viewer.
+   - Open the waveform file generated during the simulation. For example:
+   ```bash
+   dsim -view waves.mxd
+   ```
 
 ## References
 - [FPGA4Student: Verilog code for ALU](https://www.fpga4student.com/2017/06/Verilog-code-for-ALU.html)
