@@ -61,21 +61,26 @@ ALU_VIP3/
 
 ## Nasıl Çalıştırılır
 1. **Ortamı ayarlayın:**
-   - Bir SystemVerilog simülatörünün (ör. VCS, QuestaSim veya Xcelium) kurulu olduğundan emin olun.
-   - Gerekli simülatör ikili dosyalarını PATH'e ekleyin.
+   - DSim simülatörünün kurulu olduğundan emin olun.
+   - Gerekli DSim çalıştırılabilir dosyalarını PATH'e ekleyin.
 
 2. **Tasarımı ve testbench'i derleyin:**
+   - `scripts/run.f` dosyasını kullanarak DSim ile derleme yapın:
    ```bash
-   vlog -f scripts/run.f
+   dsim -f scripts/run.f
    ```
 
 3. **Simülasyonu çalıştırın:**
+   - Derleme tamamlandıktan sonra simülasyonu başlatın:
    ```bash
-   vsim -c -do "run -all" tb_top
+   dsim tb_top
    ```
 
 4. **Dalgaformunu görüntüleyin:**
-   `waves.mxd` dosyasını dalgaformu görüntüleyicinizde açın.
+   - Simülasyon sırasında oluşturulan dalgaformu dosyasını açın. Örneğin:
+   ```bash
+   dsim -view waves.mxd
+   ```
 
 ## Referanslar
 - [FPGA4Student: Verilog code for ALU](https://www.fpga4student.com/2017/06/Verilog-code-for-ALU.html)
